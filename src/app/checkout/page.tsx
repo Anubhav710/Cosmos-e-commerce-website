@@ -1,5 +1,5 @@
 "use client";
-import { useCartStore } from "@/hooks/useCartStore";
+import { UseCartStore } from "@/hooks/useCartStore";
 import React from "react";
 
 const page = () => {

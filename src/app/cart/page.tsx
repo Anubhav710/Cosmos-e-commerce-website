@@ -1,14 +1,14 @@
 "use client";
-import { useCartStore } from "@/hooks/useCartStore";
+import { UseCartStore } from "@/hooks/useCartStore";
 import Image from "next/image";
 import React from "react";
 import { media as wixMedia } from "@wix/sdk";
-import { useWixClient } from "@/hooks/useWixClient";
+import { UseWixClient } from "@/hooks/useWixClient";
 
 const page = () => {
-  const { cart, isLoading, removeItem, setOpenClose } = useCartStore();
+  const { cart, isLoading, removeItem, setOpenClose } = UseCartStore();
 
-  const wixClient = useWixClient();
+  const wixClient = UseWixClient();
   return (
     <div className="h-[calc(100vh-80px)]  overflow-auto space-y-7 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
       {cart.lineItems?.map((item) => (

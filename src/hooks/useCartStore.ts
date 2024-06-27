@@ -18,7 +18,7 @@ type CartState = {
   setOpenClose: () => void;
 };
 
-export const useCartStore = create<CartState>((set) => ({
+export const UseCartStore = create<CartState>((set) => ({
   cart: [],
   isLoading: true,
   counter: 0,

@@ -1,6 +1,6 @@
 "use client";
 
-import { useWixClient } from "@/hooks/useWixClient";
+import { UseWixClient } from "@/hooks/useWixClient";
 import { LoginState } from "@wix/sdk";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
@@ -14,7 +14,7 @@ enum MODE {
 }
 
 const LoginPage = () => {
-  const wixClient = useWixClient();
+  const wixClient = UseWixClient();
   const router = useRouter();
 
   const isLoggedIn = wixClient.auth.loggedIn();

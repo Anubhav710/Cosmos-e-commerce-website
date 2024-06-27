@@ -4,9 +4,9 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { CartModel } from "./CartModel";
-import { useWixClient } from "@/hooks/useWixClient";
+import { UseWixClient } from "@/hooks/useWixClient";
 import Cookies from "js-cookie";
-import { useCartStore } from "@/hooks/useCartStore";
+import { UseCartStore } from "@/hooks/useCartStore";
 
 const NavbarIcons = () => {
   const router = useRouter();
@@ -14,9 +14,9 @@ const NavbarIcons = () => {
   // const [isCartOpen, setIsCartOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const wixClient = useWixClient();
+  const wixClient = UseWixClient();
 
-  const { cart, getCart, counter, isCartOpen, setOpenClose } = useCartStore();
+  const { cart, getCart, counter, isCartOpen, setOpenClose } = UseCartStore();
 
   const isLoggedIn = wixClient.auth.loggedIn();
 
@@ -70,7 +70,7 @@ const NavbarIcons = () => {
       />
       {isProfileOpen && (
         <div className=" absolute rounded-md bg-white p-4 top-8 left-0 text-sm shadow-md z-20 drop-shadow-md">
-          <Link href="/profile">Profile</Link>
+          <Link href={"/"}>Profile</Link>
           <div className="mt-2 cursor-pointer" onClick={handleLogout}>
             {isLoading ? "Logging out" : "Logout"}
           </div>

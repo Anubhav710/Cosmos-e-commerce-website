@@ -1,7 +1,7 @@
 import { WixClientcontext } from "@/context/wixContext";
 import { useContext } from "react";
 
-export const useWixClient = () => {
+export const UseWixClient = () => {
   const data = useContext(WixClientcontext);
 
   if (!data) {

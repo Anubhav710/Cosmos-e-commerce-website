@@ -15,7 +15,10 @@ const CategorieList = async () => {
         <Carousel className=" w-full h-[27rem]">
           <CarouselContent className=" w-full h-[27rem]">
             {cat.items.map((item) => (
-              <CarouselItem className="basis-1/2 md:basis-1/4 lg:basis-1/5  ">
+              <CarouselItem
+                key={item._id}
+                className="basis-1/2 md:basis-1/4 lg:basis-1/5  "
+              >
                 <Link
                   key={item._id}
                   href={`/list?cat=${item.slug}`}

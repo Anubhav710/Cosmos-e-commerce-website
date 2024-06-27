@@ -29,6 +29,9 @@ dependencies:
   clsx:
     specifier: ^2.1.1
     version: 2.1.1
+  ecomstarter:
+    specifier: 'link:'
+    version: 'link:'
   embla-carousel-react:
     specifier: ^8.1.5
     version: 8.1.5(react@18.3.1)

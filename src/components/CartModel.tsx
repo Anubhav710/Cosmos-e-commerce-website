@@ -1,6 +1,6 @@
 "use client";
-import { useCartStore } from "@/hooks/useCartStore";
-import { useWixClient } from "@/hooks/useWixClient";
+import { UseCartStore } from "@/hooks/useCartStore";
+import { UseWixClient } from "@/hooks/useWixClient";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import { media as wixMedia } from "@wix/sdk";
@@ -8,8 +8,8 @@ import { currentCart } from "@wix/ecom";
 import { useRouter } from "next/navigation";
 
 export const CartModel = () => {
-  const { cart, isLoading, removeItem, setOpenClose } = useCartStore();
-  const wixClient = useWixClient();
+  const { cart, isLoading, removeItem, setOpenClose } = UseCartStore();
+  const wixClient = UseWixClient();
   const router = useRouter();
 
   const handleCheckOut = async () => {
@@ -92,7 +92,7 @@ export const CartModel = () => {
             <div>
               <div className="flex  items-center justify-between font-semibold">
                 <span className="">Subtotal</span>
-                <span className="">₹{cart.subtotal.amount}</span>
+                <span className="">₹ --- </span>
               </div>
               <p className="text-gray-500 mt-2 mb-4">
                 Shipping and taxes calculated at checkout.

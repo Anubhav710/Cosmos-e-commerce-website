@@ -2,9 +2,6 @@ import CategorieList from "@/components/CategorieList";
 import Menu from "@/components/Menu";
 import ProductList from "@/components/ProductList";
 import Slider from "@/components/Slider";
-import { WixClientcontext } from "@/context/wixContext";
-import { useWixClient } from "@/hooks/useWixClient";
-import { wixClientServer } from "@/lib/wixClientServer";
 
 import Link from "next/link";
 import { Suspense } from "react";
