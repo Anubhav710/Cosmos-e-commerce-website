@@ -25,6 +25,6 @@ export const updateUser = async (formData: FormData) => {
 
     console.log(resp);
   } catch (err) {
-    alert(err);
+    console.log(err);
   }
 };

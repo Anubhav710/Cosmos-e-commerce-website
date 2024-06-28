@@ -11,6 +11,7 @@ const page = () => {
   const wixClient = UseWixClient();
   return (
     <div className="h-[calc(100vh-80px)]  overflow-auto space-y-7 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+      <h1 className="text-4xl font-semibold mt-4">Cart</h1>
       {cart.lineItems?.map((item) => (
         <div
           className=" flex gap-4 bg-gray-50/20 even:bg-gray-100 p-5 rounded-md"
