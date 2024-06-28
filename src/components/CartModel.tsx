@@ -25,7 +25,6 @@ export const CartModel = () => {
       setOpenClose();
     }, 700);
   };
-  if (!cart.subtotal?.amount) return alert("add items");
 
   return (
     <div className="w-max  absolute p-4 shadow-sm drop-shadow-md rounded-md bg-white top-9 right-0 flex flex-col gap-6 z-20 ">
@@ -93,7 +92,7 @@ export const CartModel = () => {
             <div>
               <div className="flex  items-center justify-between font-semibold">
                 <span className="">Subtotal</span>
-                <span className="">₹ {cart.subtotal!.amount}</span>
+                <span className="">₹ ---</span>
               </div>
               <p className="text-gray-500 mt-2 mb-4">
                 Shipping and taxes calculated at checkout.
